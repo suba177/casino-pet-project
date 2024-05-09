@@ -1,9 +1,9 @@
-import RandomNumber from "./RandomNumber";
+import Wheel from "./Wheel";
 
 export default function App() {
   return (
     <>
-      <RandomNumber />
+      <Wheel />
     </>
   );
 }
