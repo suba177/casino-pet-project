@@ -8,15 +8,7 @@ body {
 }
 
 header {
-  margin: 0 auto;
-  width: 500px;
   margin-bottom: 200px;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  font-size: 30px;
 }
 
 main {
