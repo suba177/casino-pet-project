@@ -9,24 +9,23 @@ export default function Layout() {
 
   return (
     <div className="container">
-      <header>
-        <Box>
-          <AppBar position="static" sx={{ height: "90px" }}>
-            <Toolbar sx={{ flexGrow: 1 }}>
-              <Typography variant="h5" sx={{ flexGrow: 1 }}>
-                <NavLink to="/" className={setActive}>
-                  Крутить!
-                </NavLink>
-              </Typography>
-              <Typography variant="h5">
-                <NavLink to="/about" className={setActive}>
-                  О нас
-                </NavLink>
-              </Typography>
-            </Toolbar>
-          </AppBar>
-        </Box>
-      </header>
+      <Box sx={{ marginBottom: "150px" }}>
+        <AppBar position="static" sx={{ height: "90px" }}>
+          <Toolbar sx={{ flexGrow: 1 }}>
+            <Typography variant="h5" sx={{ flexGrow: 1 }}>
+              <NavLink to="/" className={setActive}>
+                Крутить!
+              </NavLink>
+            </Typography>
+            <Typography variant="h5">
+              <NavLink to="/about" className={setActive}>
+                О нас
+              </NavLink>
+            </Typography>
+          </Toolbar>
+        </AppBar>
+      </Box>
+
       <main>
         <Outlet />
       </main>
