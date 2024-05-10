@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function Wheel() {
   const [number, setNumber] = useState(null);
@@ -13,7 +13,7 @@ export default function Wheel() {
   };
 
   return (
-    <div className="container">
+    <div className="wheel">
       <button onClick={spinWheel} id="spin">
         Spin!
       </button>

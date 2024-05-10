@@ -3,17 +3,43 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
   background-image: url("./img/mainBackground.jpg");
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
   overflow: hidden;
 }
 
+header {
+  margin: 0 auto;
+  width: 500px;
+  margin-bottom: 200px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+}
+
+main {
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: white;
+  font-size: 30px;
+}
+
+.active-link {
+  color: gold;
+}
+
 .container {
+}
+
+.wheel {
+  display: flex;
+  justify-content: center;
 }
 
 .wheel__numbers {
@@ -24,6 +50,41 @@ body {
   position: relative;
   overflow: hidden;
   transition: 5s;
+}
+
+.arrow {
+  color: gold;
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 70px;
+}
+
+/* .arrow::before {
+  content: "";
+
+} */
+
+#spin {
+  position: absolute;
+  top: 470px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: #000000;
+  text-transform: uppercase;
+  border: 8px solid #fff;
+  font-weight: bold;
+  font-size: 20px;
+  width: 100px;
+  height: 100px;
+  color: gold;
+  font-family: sans-serif;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 1px;
 }
 
 .wheel__numbers div {
@@ -47,7 +108,6 @@ body {
 
 .wheel__numbers .one {
   left: 50%;
-  /* transform: rotate(0deg); */
 }
 .wheel__numbers .two {
   transform: rotate(36.2deg);
@@ -75,39 +135,4 @@ body {
 }
 .wheel__numbers .ten {
   transform: rotate(325.8deg);
-}
-
-.arrow {
-  color: gold;
-  position: absolute;
-  top: 144px;
-  left: 50%;
-  transform: translate(-50%);
-  font-size: 70px;
-}
-
-/* .arrow::before {
-  content: "";
-
-} */
-
-#spin {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  background-color: #000000;
-  text-transform: uppercase;
-  border: 8px solid #fff;
-  font-weight: bold;
-  font-size: 20px;
-  width: 100px;
-  height: 100px;
-  color: gold;
-  font-family: sans-serif;
-  border-radius: 50%;
-  cursor: pointer;
-  outline: none;
-  letter-spacing: 1px;
 }
