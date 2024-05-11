@@ -34,7 +34,7 @@ footer {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  border: 5px solid #dde;
+  border: 20px solid white;
   position: relative;
   overflow: hidden;
   transition: 5s;
@@ -56,18 +56,18 @@ footer {
 
 #spin {
   position: absolute;
-  top: 470px;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
   background-color: #000000;
   text-transform: uppercase;
-  border: 8px solid #fff;
+  border: 10px solid #fff;
   font-weight: bold;
   font-size: 20px;
   width: 100px;
   height: 100px;
-  color: gold;
+  color: white;
   font-family: sans-serif;
   border-radius: 50%;
   cursor: pointer;
