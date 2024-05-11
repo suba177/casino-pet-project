@@ -45,7 +45,7 @@ export default function Header() {
               <Typography
                 variant="h5"
                 sx={{
-                  color: "green",
+                  color: "white",
                   pr: 1,
                   ml: 2,
                   borderRight: "1px solid black",
@@ -62,7 +62,7 @@ export default function Header() {
             </Box>
             <Box sx={{ display: "flex" }}>
               <Button
-                color="success"
+                color="inherit"
                 size="large"
                 variant="contained"
                 sx={{ minWidth: "215px" }}
@@ -70,7 +70,7 @@ export default function Header() {
                 Пополнить баланс
               </Button>
               <Button
-                color="success"
+                color="inherit"
                 size="large"
                 variant="contained"
                 sx={{ ml: 2 }}

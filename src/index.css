@@ -34,7 +34,7 @@ footer {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  border: 20px solid white;
+  border: 2px solid white;
   position: relative;
   overflow: hidden;
   transition: 5s;
@@ -62,7 +62,7 @@ footer {
   z-index: 10;
   background-color: #000000;
   text-transform: uppercase;
-  border: 10px solid #fff;
+  border: 2px solid #fff;
   font-weight: bold;
   font-size: 20px;
   width: 100px;
