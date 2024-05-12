@@ -3,7 +3,7 @@
 }
 
 body {
-  background-image: url("./img/mainBackground.jpg");
+  background-image: url("/src/img/mainBackground.jpg");
   overflow: hidden;
 }
 

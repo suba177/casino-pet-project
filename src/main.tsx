@@ -1,10 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "@emotion/react";
 import { createTheme } from "@mui/material";
-import { BrowserRouter } from "react-router-dom";
 import App from "./App.tsx";
-import "./index.css";
+import { configureStore } from "@reduxjs/toolkit";
+import { casinoReducer } from "./casinoReducer.tsx";
+import { composeWithDevTools } from "@redux-devtools/extension";
+import { thunk } from "redux-thunk";
+import { applyMiddleware } from "@reduxjs/toolkit";
+import { Provider } from "react-redux";
+
+export const store = configureStore(
+  {
+    reducer: { casinoReducer },
+  },
+  composeWithDevTools(applyMiddleware(thunk))
+);
 
 const theme = createTheme({
   palette: {
@@ -19,10 +31,12 @@ const theme = createTheme({
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <App />
-      </ThemeProvider>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
