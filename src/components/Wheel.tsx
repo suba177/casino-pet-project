@@ -1,38 +1,23 @@
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function Wheel() {
-  const [number, setNumber] = useState(null);
-  // const [timerId, setTimerId] = useState();
+  const dispatch = useDispatch();
+  const value = useSelector((state) => state.casinoReducer.value);
 
-  const spinWheel = () => {
-    const min = 1;
-    const max = 10;
-
-    const newNumber = min + Math.floor(Math.random() * (max + 1 - min));
-    setNumber(newNumber);
+  const getInteger = () => {
+    const randomInteger = () => {
+      const min = 1;
+      const max = 10;
+      const rand = min + Math.random() * (max + 1 - min);
+      return Math.floor(rand);
+    };
+    dispatch({ type: "GET_INTEGER", payload: randomInteger() });
   };
 
   return (
-    <div className="wheel">
-      <button onClick={spinWheel} id="spin">
-        Spin!
-      </button>
-      <div className="arrow">↓</div>
-      <div
-        className="wheel__numbers"
-        style={{ transform: `rotate(${number * 360}deg)` }}
-      >
-        <div className="one">1</div>
-        <div className="two">2</div>
-        <div className="three">3</div>
-        <div className="four">4</div>
-        <div className="five">5</div>
-        <div className="six">6</div>
-        <div className="seven">7</div>
-        <div className="eight">8</div>
-        <div className="nine">9</div>
-        <div className="ten">10</div>
-      </div>
+    <div style={{ color: "white", fontSize: "20px" }}>
+      <div>Cлучайное число: {value}</div>
+      <button onClick={() => getInteger()}>КНОПКА</button>
     </div>
   );
 }

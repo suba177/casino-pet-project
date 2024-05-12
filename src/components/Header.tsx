@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <div>
-      <Box sx={{ marginBottom: "150px" }}>
+      <Box sx={{}}>
         <AppBar position="static" sx={{ height: "90px" }}>
           <Toolbar
             sx={{
