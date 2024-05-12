@@ -1,8 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
+import Button from "@mui/material/Button";
+import { Typography } from "@mui/material";
 
 export default function Wheel() {
   const dispatch = useDispatch();
   const value = useSelector((state) => state.casinoReducer.value);
+  const betButton = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   const getInteger = () => {
     const randomInteger = () => {
@@ -15,9 +18,26 @@ export default function Wheel() {
   };
 
   return (
-    <div style={{ color: "white", fontSize: "20px" }}>
-      <div>Cлучайное число: {value}</div>
-      <button onClick={() => getInteger()}>КНОПКА</button>
-    </div>
+    <>
+      <Typography sx={{ color: "white", fontSize: "20px" }}>
+        Cлучайное число: {value}
+      </Typography>
+      <Button
+        onClick={() => getInteger()}
+        color="inherit"
+        size="large"
+        variant="contained"
+      >
+        Крутить!
+      </Button>
+      <Typography sx={{ color: "white", fontSize: "20px" }}>
+        Поставить на:
+      </Typography>
+      {betButton.map((item, index) => (
+        <Button color="inherit" size="large" variant="contained" key={index}>
+          {item}
+        </Button>
+      ))}
+    </>
   );
 }
