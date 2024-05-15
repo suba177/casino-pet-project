@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <div>
-      <Box sx={{}}>
+      <Box sx={{ marginBottom: "100px" }}>
         <AppBar position="static" sx={{ height: "90px" }}>
           <Toolbar
             sx={{
@@ -45,19 +45,24 @@ export default function Header() {
               <Typography
                 variant="h5"
                 sx={{
-                  color: "white",
+                  color: "rgba(3, 130, 207, 1)",
                   pr: 1,
                   ml: 2,
                   borderRight: "1px solid black",
                 }}
               >
-                User12345
+                User15634
               </Typography>
               <Typography
                 variant="h5"
-                sx={{ color: "gold", ml: 1, mr: 2, minWidth: "190px" }}
+                sx={{
+                  color: "rgba(3, 130, 207, 1)",
+                  ml: 1,
+                  mr: 2,
+                  minWidth: "190px",
+                }}
               >
-                Баланс: 999000р
+                Баланс: 99546р
               </Typography>
             </Box>
             <Box sx={{ display: "flex" }}>

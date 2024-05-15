@@ -19,10 +19,17 @@ footer {
 }
 
 .active-link {
-  color: gold;
+  color: rgba(3, 130, 207, 1);
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.betNumbers {
+  display: flex;
+  justify-content: center;
 }
 
 .roulette {
